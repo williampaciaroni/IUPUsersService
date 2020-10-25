@@ -14,7 +14,7 @@ namespace IUPUsersService.Models
         }
 
         [Key]
-        public int IdUser { get; set; }
+        public int UserID { get; set; }
         [Required]
         public string AppIdentityRef { get; set; }
 
@@ -31,21 +31,29 @@ namespace IUPUsersService.Models
         public string Surname { get; set; }
         [Required]
         public DateTime Birthday { get; set; }
+        [Required]
+        public int NumberReviews { get; set; }
+        [Required]
+        public double AverageReview { get; set; }
 
-        public User(string name, string surname, DateTime birthday)
+        public User(string name, string surname, DateTime birthday, int numberReviews, double averageReview)
         {
             this.Name = name;
             this.Surname = surname;
             this.Birthday = birthday;
+            this.NumberReviews = numberReviews;
+            this.AverageReview = averageReview;
         }
 
 
-        public User(string name, string surname, DateTime birthday, string appIdentityRef)
+        public User(string name, string surname, DateTime birthday, string appIdentityRef, int numberReviews, double averageReview)
         {
             this.Name = name;
             this.Surname = surname;
             this.Birthday = birthday;
             this.AppIdentityRef = appIdentityRef;
+            this.NumberReviews = numberReviews;
+            this.AverageReview = averageReview;
         }
     }
 

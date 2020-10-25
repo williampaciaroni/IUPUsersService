@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IUPUsersService.Migrations
 {
     [DbContext(typeof(IUPUsersContext))]
-    [Migration("20201018134729_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201025170824_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,7 +37,7 @@ namespace IUPUsersService.Migrations
 
             modelBuilder.Entity("IUPUsersService.Models.User", b =>
                 {
-                    b.Property<int>("IdUser")
+                    b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -46,6 +46,9 @@ namespace IUPUsersService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<double>("AverageReview")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
@@ -53,11 +56,14 @@ namespace IUPUsersService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumberReviews")
+                        .HasColumnType("int");
+
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdUser");
+                    b.HasKey("UserID");
 
                     b.HasIndex("AppIdentityRef")
                         .IsUnique();

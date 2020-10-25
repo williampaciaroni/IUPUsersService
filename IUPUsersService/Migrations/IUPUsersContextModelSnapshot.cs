@@ -35,7 +35,7 @@ namespace IUPUsersService.Migrations
 
             modelBuilder.Entity("IUPUsersService.Models.User", b =>
                 {
-                    b.Property<int>("IdUser")
+                    b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -44,6 +44,9 @@ namespace IUPUsersService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<double>("AverageReview")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
@@ -51,11 +54,14 @@ namespace IUPUsersService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumberReviews")
+                        .HasColumnType("int");
+
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("IdUser");
+                    b.HasKey("UserID");
 
                     b.HasIndex("AppIdentityRef")
                         .IsUnique();

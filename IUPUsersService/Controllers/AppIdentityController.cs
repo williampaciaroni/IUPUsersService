@@ -42,6 +42,27 @@ namespace IUPUsersService.Controllers
             }
         }
 
+        [HttpPost("review/{kennitala}")]
+        public IActionResult ReviewUser([FromBody] ReviewRequest reviewRequest, [FromRoute] string kennitala)
+        {
+            User u = iupUsersContext.Users.FirstOrDefault(up => up.AppIdentityRef == kennitala);
+
+            if (u == null)
+            {
+                return NotFound("No user found with kennitala" + kennitala);
+            }
+            else
+            {
+                double avg = (u.AverageReview * u.NumberReviews + reviewRequest.Review) / (u.NumberReviews+1);
+                u.AverageReview = avg;
+                u.NumberReviews += 1;
+
+                iupUsersContext.SaveChanges();
+
+                return Ok();
+            }
+        }
+
         [HttpGet("{kennitala}")]
         public IActionResult GetUserData([FromRoute] string kennitala)
         {
@@ -62,7 +83,6 @@ namespace IUPUsersService.Controllers
 
                 return Ok(u);
             }
-
         }
 
         [HttpGet("kennitalaAvailable/{kennitala}")]
@@ -88,7 +108,10 @@ namespace IUPUsersService.Controllers
                     newUserRequest.Name,
                     newUserRequest.Surname,
                     DateTime.ParseExact(newUserRequest.Birthday, "dd/MM/yyyy", null),
-                    newUserRequest.Kennitala);
+                    newUserRequest.Kennitala,
+                    0,
+                    0.0
+                );
 
                 iupUsersContext.Users.Add(u);
                 AppIdentity aId = new AppIdentity(newUserRequest.Kennitala, BCrypt.Net.BCrypt.HashPassword(newUserRequest.Password));

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IUPUsersService.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,16 +23,18 @@ namespace IUPUsersService.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    IdUser = table.Column<int>(nullable: false)
+                    UserID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AppIdentityRef = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: false),
                     Surname = table.Column<string>(nullable: false),
-                    Birthday = table.Column<DateTime>(nullable: false)
+                    Birthday = table.Column<DateTime>(nullable: false),
+                    NumberReviews = table.Column<int>(nullable: false),
+                    AverageReview = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.IdUser);
+                    table.PrimaryKey("PK_Users", x => x.UserID);
                     table.ForeignKey(
                         name: "FK_Users_AppIdentities_AppIdentityRef",
                         column: x => x.AppIdentityRef,

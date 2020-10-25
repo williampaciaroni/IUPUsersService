@@ -9,7 +9,6 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Requests\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
