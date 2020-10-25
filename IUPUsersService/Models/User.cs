@@ -41,4 +41,18 @@ namespace IUPUsersService.Models
             this.AppIdentityRef = appIdentityRef;
         }
     }
+
+    public class UserFiltered
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Birthday { get; set; }
+
+        public UserFiltered(string name, string surname, DateTime birthday)
+        {
+            this.Name = name;
+            this.Surname = surname;
+            this.Birthday = birthday;
+        }
+    }
 }

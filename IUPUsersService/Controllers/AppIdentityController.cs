@@ -42,6 +42,29 @@ namespace IUPUsersService.Controllers
             }
         }
 
+        [HttpGet("{kennitala}")]
+        public IActionResult GetUserData([FromRoute] string kennitala)
+        {
+            AppIdentity aI = iupUsersContext.AppIdentities.Find(kennitala);
+
+            if (aI == null)
+            {
+                return NotFound("No user found with kennitala" + kennitala);
+            }
+            else
+            {
+                UserFiltered u = new UserFiltered
+                (
+                    aI.User.Name,
+                    aI.User.Surname,
+                    aI.User.Birthday
+                );
+
+                return Ok(u);
+            }
+
+        }
+
         [HttpGet("kennitalaAvailable/{kennitala}")]
         public IActionResult ExistUser([FromRoute] string kennitala)
         {
