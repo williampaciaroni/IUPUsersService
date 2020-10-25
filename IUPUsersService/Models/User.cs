@@ -32,6 +32,13 @@ namespace IUPUsersService.Models
         [Required]
         public DateTime Birthday { get; set; }
 
+        public User(string name, string surname, DateTime birthday)
+        {
+            this.Name = name;
+            this.Surname = surname;
+            this.Birthday = birthday;
+        }
+
 
         public User(string name, string surname, DateTime birthday, string appIdentityRef)
         {

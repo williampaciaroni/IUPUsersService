@@ -1,0 +1,165 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService.Tests/IUPUsersService.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService.Tests/IUPUsersService.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService.Tests/IUPUsersService.Tests.csproj",
+        "projectName": "IUPUsersService.Tests",
+        "projectPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService.Tests/IUPUsersService.Tests.csproj",
+        "packagesPath": "/Users/williampaciaroni/.nuget/packages/",
+        "outputPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/williampaciaroni/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/IUPUsersService.csproj": {
+                "projectPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/IUPUsersService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.7, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/IUPUsersService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/IUPUsersService.csproj",
+        "projectName": "IUPUsersService",
+        "projectPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/IUPUsersService.csproj",
+        "packagesPath": "/Users/williampaciaroni/.nuget/packages/",
+        "outputPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/williampaciaroni/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

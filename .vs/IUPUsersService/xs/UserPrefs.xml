@@ -1,22 +1,26 @@
 ﻿<Properties StartupConfiguration="{ECD943C5-1D0C-46DF-B294-7529BE298315}|Default">
   <MonoDevelop.Ide.ItemProperties.IUPUsersService PreferredExecutionTarget="/Applications/Firefox.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="IUPUsersService/Controllers/AppIdentityController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IUPUsersService.Tests/UserTest.cs">
     <Files>
-      <File FileName="IUPUsersService/Controllers/AppIdentityController.cs" Line="66" Column="1" />
-      <File FileName="IUPUsersService/Startup.cs" Line="39" Column="30" />
-      <File FileName="IUPUsersService/Models/User.cs" Line="37" Column="10" />
-      <File FileName="IUPUsersService/Models/Requests/NewUserRequest.cs" />
-      <File FileName="IUPUsersService/Context/IUPUsersContext.cs" Line="32" Column="10" />
-      <File FileName="IUPUsersService/Models/AppIdentity.cs" Line="22" Column="1" />
+      <File FileName="IUPUsersService.Tests/UnitTest1.cs" Line="42" Column="53" />
+      <File FileName="IUPUsersService/Models/User.cs" Line="39" Column="38" />
+      <File FileName="IUPUsersService/Controllers/AppIdentityController.cs" Line="90" Column="85" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="IUPUsersService" expanded="True">
             <Node name="IUPUsersService" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
+            <Node name="IUPUsersService.Tests" expanded="True" selected="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="IUPUsersService" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
