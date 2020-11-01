@@ -14,7 +14,7 @@
         "outputPath": "/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/williampaciaroni/.config/NuGet/NuGet.Config"
+          "/Users/williampaciaroni/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

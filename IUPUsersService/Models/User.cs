@@ -27,6 +27,8 @@ namespace IUPUsersService.Models
 
         [Required]
         public string Name { get; set; }
+
+        public string? Bio { get; set; }
         [Required]
         public string Surname { get; set; }
         [Required]
@@ -36,38 +38,50 @@ namespace IUPUsersService.Models
         [Required]
         public double AverageReview { get; set; }
 
-        public User(string name, string surname, DateTime birthday, int numberReviews, double averageReview)
+        public byte[]? Image { get; set; }
+
+        public User(string name, string? bio , string surname, DateTime birthday, int numberReviews, double averageReview)
         {
             this.Name = name;
+            this.Bio = bio;
             this.Surname = surname;
             this.Birthday = birthday;
             this.NumberReviews = numberReviews;
             this.AverageReview = averageReview;
+            this.Image = null;
         }
 
 
-        public User(string name, string surname, DateTime birthday, string appIdentityRef, int numberReviews, double averageReview)
+        public User(string name, string? bio, string surname, DateTime birthday, string appIdentityRef, int numberReviews, double averageReview, byte[]? image)
         {
             this.Name = name;
+            this.Bio = bio;
             this.Surname = surname;
             this.Birthday = birthday;
             this.AppIdentityRef = appIdentityRef;
             this.NumberReviews = numberReviews;
             this.AverageReview = averageReview;
+            this.Image = image;
         }
     }
 
     public class UserFiltered
     {
         public string Name { get; set; }
+        public string? Bio { get; set; }
         public string Surname { get; set; }
         public DateTime Birthday { get; set; }
+        public byte[]? Image { get; set; }
+        public double AverageReview { get; set; }
 
-        public UserFiltered(string name, string surname, DateTime birthday)
+        public UserFiltered(string name, string? bio, string surname, DateTime birthday, byte[]? image, double averageReview)
         {
             this.Name = name;
+            this.Bio = bio;
             this.Surname = surname;
             this.Birthday = birthday;
+            this.Image = image;
+            this.AverageReview = Math.Round(averageReview * 2, MidpointRounding.AwayFromZero) / 2;
         }
     }
 }

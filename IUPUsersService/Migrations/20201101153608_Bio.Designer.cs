@@ -4,14 +4,16 @@ using IUPUsersService.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IUPUsersService.Migrations
 {
     [DbContext(typeof(IUPUsersContext))]
-    partial class IUPUsersContextModelSnapshot : ModelSnapshot
+    [Migration("20201101153608_Bio")]
+    partial class Bio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

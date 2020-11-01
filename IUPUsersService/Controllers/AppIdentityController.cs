@@ -77,8 +77,11 @@ namespace IUPUsersService.Controllers
                 UserFiltered u = new UserFiltered
                 (
                     aI.User.Name,
+                    aI.User.Bio,
                     aI.User.Surname,
-                    aI.User.Birthday
+                    aI.User.Birthday,
+                    aI.User.Image,
+                    aI.User.AverageReview
                 );
 
                 return Ok(u);
@@ -106,11 +109,13 @@ namespace IUPUsersService.Controllers
             {
                 User u = new User(
                     newUserRequest.Name,
+                    null,
                     newUserRequest.Surname,
                     DateTime.ParseExact(newUserRequest.Birthday, "dd/MM/yyyy", null),
                     newUserRequest.Kennitala,
                     0,
-                    0.0
+                    0.0,
+                    null
                 );
 
                 iupUsersContext.Users.Add(u);
