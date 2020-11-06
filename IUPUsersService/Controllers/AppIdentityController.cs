@@ -79,12 +79,66 @@ namespace IUPUsersService.Controllers
                     aI.User.Name,
                     aI.User.Bio,
                     aI.User.Surname,
-                    aI.User.Birthday,
+                    aI.User.Birthday.Date.ToString("dd/MM/yyyy"),
                     aI.User.Image,
                     aI.User.AverageReview
                 );
 
                 return Ok(u);
+            }
+        }
+
+        [HttpGet("{kennitala}/hostname")]
+        public IActionResult GetHostname([FromRoute] string kennitala)
+        {
+            User u = iupUsersContext.Users.FirstOrDefault(u => u.AppIdentityRef == kennitala);
+
+            if (u == null)
+            {
+                return NotFound("No user found with kennitala" + kennitala);
+            }
+            else
+            {
+                return Ok(u.Name);
+            }
+        }
+
+        [HttpGet("{kennitala}/rating")]
+        public IActionResult GetRating([FromRoute] string kennitala)
+        {
+            User u = iupUsersContext.Users.FirstOrDefault(u => u.AppIdentityRef == kennitala);
+
+            if (u == null)
+            {
+                return NotFound("No user found with kennitala" + kennitala);
+            }
+            else
+            {
+                return Ok(u.AverageReview);
+            }
+        }
+
+        [HttpPost("edit/{kennitala}")]
+        public IActionResult EditUser([FromRoute] string kennitala, [FromBody] EditUserRequest editUserRequest)
+        {
+            User u = iupUsersContext.Users.FirstOrDefault(u=>u.AppIdentityRef.Equals(kennitala));
+
+            if (u == null)
+            {
+                return NotFound("No user found with kennitala" + kennitala);
+            }
+            else
+            {
+                if(editUserRequest.Image!=null || !editUserRequest.Image.Equals(""))
+                {
+                    u.Image = Convert.FromBase64String(editUserRequest.Image);
+                }
+                u.Name = editUserRequest.Name;
+                u.Bio = editUserRequest.Bio;
+                u.Surname = editUserRequest.Surname;
+                u.Birthday = DateTime.Parse(editUserRequest.Birthday);
+                iupUsersContext.SaveChanges();
+                return Ok("User edited with success.");
             }
         }
 

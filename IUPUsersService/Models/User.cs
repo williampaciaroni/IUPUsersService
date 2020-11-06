@@ -70,11 +70,11 @@ namespace IUPUsersService.Models
         public string Name { get; set; }
         public string? Bio { get; set; }
         public string Surname { get; set; }
-        public DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
         public byte[]? Image { get; set; }
         public double AverageReview { get; set; }
 
-        public UserFiltered(string name, string? bio, string surname, DateTime birthday, byte[]? image, double averageReview)
+        public UserFiltered(string name, string? bio, string surname, string birthday, byte[]? image, double averageReview)
         {
             this.Name = name;
             this.Bio = bio;

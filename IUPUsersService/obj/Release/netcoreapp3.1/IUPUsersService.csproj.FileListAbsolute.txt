@@ -61,3 +61,6 @@
 /Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/obj/Release/netcoreapp3.1/IUPUsersService.pdb
 /Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/obj/Release/netcoreapp3.1/IUPUsersService.genruntimeconfig.cache
 /Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/obj/Release/netcoreapp3.1/IUPUsersService.csprojAssemblyReference.cache
+/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/williampaciaroni/Projects/IUPUsersService/IUPUsersService/bin/Release/netcoreapp3.1/Newtonsoft.Json.Bson.dll

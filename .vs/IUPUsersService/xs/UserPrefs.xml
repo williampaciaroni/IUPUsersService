@@ -2,25 +2,28 @@
   <MonoDevelop.Ide.ItemProperties.IUPUsersService PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="IUPUsersService/Controllers/AppIdentityController.cs">
     <Files>
-      <File FileName="IUPUsersService/Models/User.cs" Line="84" Column="99" />
-      <File FileName="IUPUsersService/Controllers/AppIdentityController.cs" Line="84" Column="42" />
+      <File FileName="IUPUsersService/Controllers/AppIdentityController.cs" Line="117" Column="42" />
       <File FileName="IUPUsersService/Context/IUPUsersContext.cs" />
       <File FileName="IUPUsersService/Models/Requests/ReviewRequest.cs" />
-      <File FileName="IUPUsersService/Models/Requests/NewUserRequest.cs" Line="10" Column="45" />
       <File FileName="IUPUsersService/Models/AppIdentity.cs" />
+      <File FileName="IUPUsersService/Models/Requests/EditUserRequest.cs" />
+      <File FileName="IUPUsersService/Startup.cs" />
+      <File FileName="IUPUsersService/Models/User.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="IUPUsersService" expanded="True">
-            <Node name="IUPUsersService" expanded="True" selected="True">
+            <Node name="IUPUsersService" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Context" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AppIdentityController.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True">
                 <Node name="Requests" expanded="True" />
               </Node>
             </Node>
-            <Node name="IUPUsersService.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
